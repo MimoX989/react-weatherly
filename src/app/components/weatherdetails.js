@@ -14,7 +14,7 @@ import Rain from "./detail-cards/rain";
 import Uv from "./detail-cards/uv";
 import Pressure from "./detail-cards/pressure";
 import Feelslike from "./detail-cards/feelslike";
-import { WeatherContext } from "../utils/context";
+import { WeatherContext } from "../utils/provider";
 
 const WeatherDetails = () => {
   let [data] = useContext(WeatherContext);

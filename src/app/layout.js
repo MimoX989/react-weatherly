@@ -1,5 +1,4 @@
 import { Providers } from "./utils/provider";
-import Context from "./utils/context";
 
 
 export const metadata = {
@@ -12,7 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="w-screen h-screen">
         <Providers>
-          <Context>{children}</Context>
+         {children}
         </Providers>
       </body>
     </html>

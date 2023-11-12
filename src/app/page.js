@@ -1,12 +1,13 @@
 "use client";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import WeatherDetails from "./components/weatherdetails";
 import WeatherPanel from "./components/weatherpanel";
 import "./globals.css";
-import { WeatherContext } from "./utils/context";
+import { WeatherContext } from "./utils/provider";
 
 export default function Home() {
   let [data, setData, query, setQuery] = useContext(WeatherContext);
+  const [iserror, setError] = useState(0);
 
   useEffect(() => {
     fetchData();
@@ -26,9 +27,17 @@ export default function Home() {
     try {
       const response = await fetch(url, options);
       const result = await response.json();
-      await setData(result);
+
+      if (result.error) {
+        console.log({ Error: "No location found!" });
+        setError(1);
+      } else {
+        setError(false);
+        setData(result);
+      }
       // console.log(result);
     } catch (error) {
+      setError(2);
       console.error(error);
     }
   };
@@ -42,7 +51,7 @@ export default function Home() {
             marginRight: "-30px",
           }}
         >
-          <WeatherPanel />
+          <WeatherPanel iserror={iserror} />
         </div>
 
         <div
