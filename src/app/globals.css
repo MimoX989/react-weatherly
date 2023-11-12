@@ -2,26 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.panel-card-main{
+    padding-right: 2rem;
+    background-color:azure;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.detail-card-main{
+    background-color: rgb(235, 248, 248);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.cityName{
+    font-size: xxx-large;
+    font-weight: lighter;
+}
+
+.date{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.deg-container{
+    height: 300px;
+    font-weight: 500;
+}
+
+.w-degree{
+    font-size: 5rem;
+}
+
+.w-degree>span{
+font-size: xx-large;
+}
+
+.w-status{
+    font-size: medium;
+    align-items: center;
+    width: 100px;
+}
+
+.w-status>span{
+    margin-right: 10px;
+}
+
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+}
+
+.detail-card{
+    width: auto;
+    height: 180px;
+}
+.detail-card-header{
+    display:flex;
+    justify-content: space-between;
+
+}
+.card-icon{
+    font-size: 45px;
 }
