@@ -27,8 +27,8 @@ const WeatherPanel = (props) => {
   };
 
   return (
-    <Card fullWidth="true" style={{ paddingRight: "30px" }}>
-      <CardHeader className="flex justify-between ">
+    <Card className="md:pr-5 max-md:w-full" fullWidth="true">
+      <CardHeader className="flex justify-between px-5 ">
         <div className="flex flex-row gap-2">
           <Image
             alt="weatherly logo"
@@ -51,10 +51,12 @@ const WeatherPanel = (props) => {
       </CardHeader>
       <Divider />
       <CardBody className="gap-5">
-        <div className="px-3 my-2">
+        <div className="flex w-full px-3 my-2 justify-center">
           {" "}
           <form onSubmit={handleSubmit}>
             <Input
+              fullWidth="true"
+              size="lg"
               type="text"
               label="Search"
               placeholder={query}

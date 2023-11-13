@@ -2,64 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-.panel-card-main{
-    padding-right: 2rem;
-    background-color:azure;
+.panel-card-main {
+  background-color: azure;
 }
 
-.detail-card-main{
-    background-color: rgb(235, 248, 248);
+.detail-card-main {
+  background-color: rgb(235, 248, 248);
 }
 
-.cityName{
-    font-size: xxx-large;
-    font-weight: lighter;
+.panel-card-layout{
+    margin-right: -30px;
 }
 
-.date{
-    font-size: medium;
-    font-weight: bold;
+.cityName {
+  font-size: xxx-large;
+  font-weight: lighter;
 }
 
-.deg-container{
-    height: 300px;
+.date {
+  font-size: medium;
+  font-weight: bold;
+}
+
+.deg-container {
+  height: 300px;
+  font-weight: 500;
+}
+
+.w-degree {
+  font-size: 5rem;
+}
+
+.w-degree > span {
+  font-size: xx-large;
+}
+
+.w-status {
+  font-size: medium;
+  align-items: center;
+  width: 100px;
+}
+
+.w-status > span {
+  margin-right: 10px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 2rem;
+}
+
+.detail-card {
+  width: auto;
+  height: 180px;
+}
+.detail-card-header {
+  display: flex;
+  justify-content: space-between;
+}
+.card-icon {
+  font-size: 45px;
+}
+
+
+@media (max-width: 784px) {
+  .panel-card-layout,
+  .det-card-layout {
+    display: flex;
+    width: 100%;
+  }
+
+  .det-card-layout {
+    margin-top: -80px;
+  }
+  .deg-container {
+    height: 280px;
     font-weight: 500;
+  }
 }
 
-.w-degree{
-    font-size: 5rem;
-}
-
-.w-degree>span{
-font-size: xx-large;
-}
-
-.w-status{
-    font-size: medium;
-    align-items: center;
-    width: 100px;
-}
-
-.w-status>span{
-    margin-right: 10px;
-}
-
-.card-grid{
+@media (max-width: 1040px) {
+  .card-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    gap: 2rem;
-}
-
-.detail-card{
-    width: auto;
+  }
+  .detail-card {
+    min-width: 190px;
     height: 180px;
-}
-.detail-card-header{
-    display:flex;
-    justify-content: space-between;
-
-}
-.card-icon{
-    font-size: 45px;
+  }
 }

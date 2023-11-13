@@ -19,7 +19,7 @@ import { WeatherContext } from "../utils/provider";
 const WeatherDetails = () => {
   let [data] = useContext(WeatherContext);
   return (
-    <Card >
+    <Card className="max-md:w-full">
       <CardHeader className="flex gap-3">
         <div className="flex flex-col">
           <p className="text-xl font-semibold">Weather Details</p>

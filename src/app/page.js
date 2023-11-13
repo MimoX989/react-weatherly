@@ -43,20 +43,15 @@ export default function Home() {
   };
   return (
     <main className="flex h-screen w-screen justify-center">
-      <div className="flex flex-row p-5">
+      <div className="flex flex-row p-5 max-md:flex-col h-full">
         <div
-          className="flex"
-          style={{
-            minWidth: "320px",
-            marginRight: "-30px",
-          }}
+          className="flex panel-card-layout"
         >
           <WeatherPanel iserror={iserror} />
         </div>
 
         <div
-          className="flex"
-          style={{ minWidth: "600px", marginRight: "-30px" }}
+          className="flex det-card-layout"
         >
           <WeatherDetails />
         </div>
